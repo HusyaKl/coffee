@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coffee</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  
+  <body class="d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top mynav">
+        <a class="navbar-brand">COFFEECLUB</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+              <div class="nav-link "> <%= link_to "Главная страница", root_url %> </div>
+          </li>
+            <li class="nav-item">
+              <div class="nav-link "> <%= link_to "О нас", posts_about_url, id: "About" %> </div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link "><%= link_to "Кофейная история", posts_history_url %></div>
+            </li>
+            <li class="nav-item">
+            <div class="nav-link "><%= link_to "Рецепты", recipes_index_url, id: "Rec" %></div>
+            </li>
+            <li class="nav-item">
+            <div class="nav-link "><% if user_signed_in? %><%= link_to "Обсуждение кофейных тем", categories_index_url %><% end %></div>
+            </li>
+          </ul>
+          <div class="nav navbar-right">
+                    <ul class="nav navbar-nav">
+                    <% if user_signed_in? %>
+                        <li><span class="nav-link"><%= current_user.email %></span></li>
+                        <li><span class="nav-link" ><i class="fa fa-sign-in" aria-hidden="true"></i><%= link_to "Выход", destroy_user_session_path, method: :delete, id: "SignOut" %></span></li>
+                    <% else %>
+                        <li><span class="nav-link" ><i class="fa fa-sign-in" aria-hidden="true"></i><%= link_to "Вход", new_user_session_path, id: "SignIn" %></span></li>
+                        <li><span class="nav-link" ><i class="fa fa-user-plus" aria-hidden="true"></i><%= link_to "Регистрация", new_user_registration_path %></span></li>
+                    <% end %>    
+                    </ul>
+                </div>
+             </div>
+        </nav>
+  <div class="wrapper flex-grow-1">
+    <%= yield %>
+    </div>
+     <%= javascript_pack_tag 'script', 'data-turbolinks-track': 'reload' %>
+      <footer class="navbar-fixed-bottom footer">
+        <div class="text-center center-block">
+            <p class="txt-railway">- Coffeeclub -</p>
+            <br/>
+            <div class="icons">
+                <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+                <a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+            </div>
+        </div>
+        </footer>
+  </body>
+</html>

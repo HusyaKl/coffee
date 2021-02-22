@@ -1,0 +1,26 @@
+<h1>Change</h1>
+<div class="my-post">
+<h1 class="my-h1">Рецепты наших пользователей</h1>
+<hr>
+<div class="line">
+<i class="fa fa-plus" aria-hidden="true"></i> <%= link_to "Добавить рецепт ", new_recipe_path, class: "create-r", id: "AddR" %>
+</div>
+<hr>
+<div class="line">
+<i class="fa fa-search" aria-hidden="true"></i>
+<%= form_with url: "/recipes/result", method: :get, id: 'search_form' do |form| %>
+  <%= form.label :method, " Введите метод:" %>
+  <%= form.text_field :method, id: "search" %>
+  <%= form.submit "Поиск", id: "res" %>
+<% end %>
+</div>
+<hr>
+<% @recipes.each do |recipe|%>
+<h3><%= link_to recipe.title.upcase, recipe_path(recipe) %></h3>
+<p class="par min-par"><%= recipe.author %></p>
+<p class="par"><%= recipe.summary %></p>
+<% end %>
+</div>
+<p class="pagination">
+<%= will_paginate @recipes, renderer: 'BootstrapPaginationHelper::LinkRenderer', :previous_label => 'Предыдущая', :next_label => 'Следующая'%>
+</p>

@@ -1,0 +1,161 @@
+.mynav,footer{
+    background-color: rgb(68, 65, 64);
+}
+.txt-railway{
+    padding-top: 1%;
+    color: #777;
+}
+.icons{
+    padding-bottom: 1%;
+}
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+    color: #428bca;
+}
+.header{
+    background-image: url(asset-path("header-img.jpg"));
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    margin-bottom: 0;
+}
+.hd-text{
+    font-size: 100px;
+    padding-top: 20%;
+    color: white;
+    opacity: 80%;
+    font-family: 'header-fontnastya';
+    background-color: rgba(0, 0, 0, 0.5);
+    
+ }
+.about-posts{
+    padding-left: 10%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+h1{
+     margin-top: 0;
+
+}
+#Coffee-story{
+     padding-bottom: 1%;
+}
+@font-face {
+    font-family: "header-fontnastya"; 
+        
+    src: url('/fonts/calligraph_[allfont.ru].ttf') format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+.navbar a:hover {
+    color: #428bca;
+    text-decoration: none;
+}
+.navbar a {
+    color: #a18c7b;
+}
+.footer a {
+    color: #a18c7b;
+}
+.footer a:hover {
+    color: #428bca;
+    text-decoration: none;
+}
+
+.read-to{
+    color: #428bca; 
+}
+.my-h1{
+    font-family: 'header-fontnastya';
+    color:rgb(68, 65, 64);
+}
+h3{
+    color:rgb(197, 151, 113);
+}
+.my-post{
+    padding-left: 8%;
+    padding-right: 10%;
+}
+.par{
+    padding-left: 1%;
+    padding-right: 15%;
+}
+.min-par{
+    color: #00000070;
+    font-size: 14px;;
+}
+.min-list{
+    padding-left: 5%;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #a18c7b;
+}
+.my-form{
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-right: 40%;
+    padding-bottom: 5%;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #007bff;
+}
+textarea {
+    resize: none; 
+   } 
+.comment {
+    padding-right: 40%; 
+}
+.pagination li{
+        display:inline-block;
+    
+}
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #428bca;
+    border-color: #428bca;
+}
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.35rem 0.75rem;
+    margin-left: -1;
+    line-height: 1.25;
+    color: #428bca;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+.line * {
+    display: inline-block;
+  }
+a{
+    color:rgb(197, 151, 113);
+}
+ 
+.create-r{
+    color:black;
+}
+
+a:hover {
+    color: #428bca;
+    text-decoration: none;
+}
+ 
+.create-l{
+    padding-right: 1%;
+    padding-top: 1%;
+    float: right;
+}
+.my-h4{
+    color: #428bca;
+}
+.comment{
+    padding-right: 20%;
+    padding-left: 3%;
+}
+.area{
+ padding-right: 20%;
+}

@@ -1,0 +1,11 @@
+<h1>Change</h1>
+<div class="my-post">
+<h1 class="my-h1">Результаты поиска:</h1>
+<% @recipes.each do |recipe| %>
+     <h3><%= link_to recipe.title.upcase, recipe_path(recipe) %></h3>
+     <p style="color: #428bca"><em><%= recipe.method %></em></p>
+     <p><%= recipe.summary %> </p>
+  <% end %>
+ <%= link_to "Назад", recipes_index_url %> 
+</div>
+

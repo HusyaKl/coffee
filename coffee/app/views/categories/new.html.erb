@@ -1,0 +1,13 @@
+<h1>Change</h1>
+<div class="my-form">
+<h1 class="my-h1">Категории</h1>
+<%= form_for @category do |f| %>
+  <div class="form-group">
+     <%= f.label :Новая_категория %><br />
+     <%= f.text_field :name, class: "form-control", required: "required" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Сохранить", class: "btn btn-primary"%>
+  </div>
+<% end %>
+</div>

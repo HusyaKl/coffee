@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coffeeclub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+    <header class="header"><h1 class="text-center hd-text">Добро пожаловать!</h1></header>
+    <div class="container-fluid">
+        <div class="about-posts">
+            <h3>О НАС</h3>
+            <br>
+            <p>Если вы любите кофе, то наш сайт для вас!<br>
+            Здесь вы можеле делиться рецептами кофейных напитков, общаться с другими участниками.</p>
+            <div class="read-to"><%= link_to "Читать далее...", posts_about_url %></div>
+        </div>
+        <div class="about-posts" id="Coffee-story">
+            <h3>КОФЕЙНАЯ ИСТОРИЯ</h3>
+            <br>
+            <p>С него начинают утро две трети жителей Земли. Кофе – величайший путешественник всех времен и народов.<br>
+            В Европе кофе известен всего 300 лет, на самом же деле — он отметил свой тысячелетний юбилей.<br>
+            Речь идет о самом восхитительном напитке на Земле — о кофе.</p>
+            <div class="read-to"><%= link_to "Читать далее...", posts_history_url %></div>
+        </div>
+    </div>
+</body>
+</html>
